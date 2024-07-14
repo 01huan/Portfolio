@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <h3>林奕寰</h3>
+        <ul>
+            <li><a href="about">About</a></li>
+            <li><a href="skills">Skills</a></li>
+            <li><a href="projects">Projetcs</a></li>
+        </ul>
+    </nav>
+    <main id="about">
+        <h3 class="title">About</h3>
+        <div>
+            <div class="content">
+                <h2>Hi，大家好，我是林奕寰👋</h2>
+                <p>我目前就讀南山高中高一，熱愛研究電腦、資訊科技以及數理相關的知識。我經常使用程式設計來解決課業和生活中的各種問題。在高一的自主學習中，我選擇了網頁前端程式設計作為我的學習內容，接觸並學習了HTML、CSS和JavaScript程式碼的撰寫。這個「作品集」網頁是我一整年學習成果的展示之一，同時也可以用來存放其他實作專案。</p>
+            </div>
+            <div class="self-img"><img src="img/self-img.png" alt="Self-Image" width="300px"></div>
+        </div>
+    </main>
+    <section id="skills">
+        <h3 class="title">Skills</h3>
+        <div>
+            <div class="content">
+                <h2>相關技能</h2>
+                <p>從國中開始到高一下的這段時間，我所透過如學校課程、自學，或是營隊等的管道學過的程式語言包含：Python、C/C++、LaTeX、Excel VBA、HTML、CSS、JavaScript。除了程式以外，我也擅長操作Microsoft Office的文書處理軟體。</p>
+            </div>
+            <div class="langs">
+                <i class='bx bxl-python'></i>
+                <i class='bx bxl-c-plus-plus'></i>
+                <i class='bx bxl-visual-studio' ></i>
+                <i class='bx bxl-html5' ></i>
+                <i class='bx bxl-css3' ></i>
+                <i class='bx bxl-javascript' ></i>
+            </div>
+            
+        </div>
+    </section>
+    <section id="projects">
+        <h3 class="title">Projetcs</h3>
+        <div id="github"><a href="https://github.com/01huan?tab=repositories" target="_blank">My GitHub<i class='bx bxl-github' ></i></a></div>
+        <div class="files">
+            <div class="card">
+                <img src="img/calc.png" alt="Project 1" class="cover" height="162.5px">
+                <div class="description">
+                    <h4>Web Calculator</h4>
+                    <p>網頁基礎計算機：透過螢幕中鍵盤上的按鍵輸入算式即可求值。此外，網頁的深／淺主題色也可以調整。</p>
+                    <a href="https://github.com/01huan/Web-Calculator" class="link" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/latex.png" alt="Project 2" class="cover" height="162.5px">
+                <div class="description">
+                    <h4>LaTeX Formula Generator</h4>
+                    <p>LaTeX數學算式生成器：輸入LaTeX程式碼並按下生成按鈕，網頁就會顯示出其程式碼所呈現的LaTeX數學算式。</p>
+                    <a href="https://github.com/01huan/LaTeX-Display" class="link" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/css.png" alt="Project 3" class="cover" height="162.5px">
+                <div class="description">
+                    <h4>CSS Gradient Generator</h4>
+                    <p>CSS漸層程式碼生成器：輸入起點顏色、終點顏色及漸層的角度方向，網頁就會顯示出漸層示意圖，並生成CSS程式碼供使用者複製。</p>
+                    <a href="https://github.com/01huan/CSS-Gradient" class="link" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/portfolio.png" alt="Project 4" class="cover" height="162.5px">
+                <div class="description">
+                    <h4>Portfolio</h4>
+                    <p>作品集：個人簡介，以及用來存放自主學習的實作作品。</p>
+                    <a href="https://github.com/01huan/Portfolio" class="link" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.getElementById(targetId);
+        window.scrollTo({
+            top: targetElement.offsetTop - document.querySelector('nav').offsetHeight - 20, 
+            behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
